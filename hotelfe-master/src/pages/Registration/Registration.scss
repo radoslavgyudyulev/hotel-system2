@@ -1,0 +1,12 @@
+.formContainer {
+	display: flex;
+	flex-direction: column;
+	background-color: #4076E5;
+	padding: 5vh 10%;
+
+	& .inputsContainer {
+		& div {
+			margin-bottom: 15px;
+		}
+	}
+}

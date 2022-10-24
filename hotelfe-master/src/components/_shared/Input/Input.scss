@@ -1,0 +1,32 @@
+.inputContainer {
+	display: flex;
+	flex-direction: column;
+
+	& input {
+		padding: 5px;
+		border-radius: 8px;
+		font-size: 16px;
+		font-weight: 400;
+		color: #4076E5;
+		background-color: #FFFFFF;
+		border: none;
+		padding-left: 15px;
+
+		&::placeholder {
+			color: #4076E5;
+			opacity: 0.5;
+		}
+
+		&:focus {
+			border: none;
+			outline: none;
+		}
+	}
+
+	& .errorMessage {
+		padding: 5px 0 0 15px;
+		font-size: 12px;
+		font-weight: normal;
+		color: red;
+	}
+}

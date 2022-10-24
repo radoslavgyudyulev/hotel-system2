@@ -1,0 +1,27 @@
+@import "../../styles/variables";
+
+.container {
+  @media (min-width: $desktop-width) {
+    padding: $app-container-padding-desktop;
+  }
+
+  @media (min-width: $laptop-min-width) and (max-width: $laptop-max-width) {
+    padding: $app-container-padding-laptop;
+  }
+
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    padding: $app-container-without-padding;
+  }
+
+  @media (min-width: $mobile-min-width) and (max-width: $mobile-max-width) and (orientation: landscape) {
+    padding: $app-container-without-padding;
+  }
+
+  @media (min-width: $mobile-min-width) and (max-width: $mobile-max-width) {
+    padding: $app-container-without-padding;
+  }
+
+  @media (min-width: $smaller-mobile-min-width) and (max-width: $smaller-mobile-max-width) {
+    padding: $app-container-without-padding;
+  }
+}
