@@ -17,8 +17,10 @@ const API_URL = "http://localhost:8000";
 
 
 const Booking = ({hotel}) => {
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
+  const today = new Date();
+  const tomorrow = today.setDate(today.getDate() + 1)
+  const [startDate, setStartDate] = useState(today);
+  const [endDate, setEndDate] = useState(tomorrow);
   const [isBooked, setIsBooked] = useState(false)
 
   const acessToken = localStorageGet('acessToken')
@@ -56,7 +58,7 @@ const Booking = ({hotel}) => {
 </div>
 <div>
   <span>END DATE</span>
-  <DatePicker selected={endDate} onChange={(date) => setEndDate(date)} />
+  <DatePicker minDate={startDate} selected={endDate} onChange={(date) => setEndDate(date)} />
 </div>
 
 {userRole === '"user"' && 
